@@ -10,6 +10,6 @@ vue3 模板
 
 高亮代码 v-code-diff
 
-代码规范  
+代码规范 eslint prettier   
 
 提交规范
