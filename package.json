@@ -10,7 +10,7 @@
     "lint": "eslint --fix --ext .ts,.vue src",
     "prettier": "prettier --write .",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "git add . && cz"
   },
   "dependencies": {
     "@vueuse/core": "^8.7.4",

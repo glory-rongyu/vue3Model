@@ -12,4 +12,4 @@ vue3 模板
 
 代码规范 eslint prettier   
 
-提交规范
+提交规范 husky
