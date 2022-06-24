@@ -3,7 +3,7 @@ import ElementPlus from 'element-plus'
 import router from './router/static'
 import 'element-plus/dist/index.css'
 // import CodeDiff from 'v-code-diff';
-import App from "./App.vue";
+import App from './App.vue'
 
 const app = createApp(App)
 app.use(ElementPlus)
