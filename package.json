@@ -59,7 +59,7 @@
   "lint-staged": {
     "src/**/*.{.js,.jsx,.ts,.tsx,vue}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write ."
     ]
   },
   "config": {
