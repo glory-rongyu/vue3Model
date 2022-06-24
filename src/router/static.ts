@@ -11,7 +11,35 @@ const routes: Array<VueRouter.RouteRecordRaw> = [
         meta: {
             title: 'home' // 首页
             // title: pageTitle('home'), // 首页
-        }
+        },
+        children: [
+            {
+                path: '/demo',
+                name: 'demo',
+                component: () => import('/@/views/demo/default/index.vue'),
+                redirect: '/demo/default',
+                children: [
+                    {
+                        path: '/',
+                        name: 'demo-default',
+                        component: () => import('/@/views/demo/default/index.vue'),
+                        meta: {
+                            title: 'demo-default' // 首页
+                            // title: pageTitle('home'), // 首页
+                        }
+                    },
+                    {
+                        path: '/',
+                        name: 'demo-vCodeDiff',
+                        component: () => import('/@/views/demo/vCodeDiff/index.vue'),
+                        meta: {
+                            title: 'demo-default' // 首页
+                            // title: pageTitle('home'), // 首页
+                        }
+                    }
+                ]
+            }
+        ]
     }
 ]
 
