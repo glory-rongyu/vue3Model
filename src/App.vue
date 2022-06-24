@@ -1,18 +1,19 @@
+<template>
+    <el-config-provider locale="zhCn">
+        <router-view></router-view>
+    </el-config-provider>
+</template>
+
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { onMounted } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import { onMounted } from 'vue'
 
+// 打印环境变量
 onMounted(() => {
-  console.log('import.meta.env =', import.meta.env);
-});
+    console.log('import.meta.env =', import.meta.env)
+})
 </script>
-
-<template>
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
-</template>
 
 <style>
 #app {

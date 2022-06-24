@@ -8,8 +8,8 @@ vue3 模板
 
 状态管理 pinia mitt
 
-高亮代码 v-code-diff
+高亮代码 代码对比 v-code-diff
 
-代码规范 eslint prettier   
+代码规范 eslint prettier
 
 提交规范 husky
