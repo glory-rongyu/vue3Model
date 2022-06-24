@@ -47,6 +47,12 @@
     "vite": "^2.9.9",
     "vue-tsc": "^0.34.7"
   },
+  "lint-staged": {
+    "src/**/*.{.js,.jsx,.ts,.tsx,vue}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
