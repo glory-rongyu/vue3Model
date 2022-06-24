@@ -11,7 +11,8 @@
     "prettier": "prettier --write .",
     "prepare": "husky install",
     "commit": "cz",
-    "commit-all": "git add . && cz"
+    "commit-all": "git add . && cz",
+    "commit-push": "git push -u origin main"
   },
   "dependencies": {
     "@vueuse/core": "^8.7.4",
