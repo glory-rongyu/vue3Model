@@ -1,5 +1,6 @@
 <template>
-    <div>1111</div>
+    <div>default</div>
+    <router-view />
 </template>
 
 <script setup lang="ts"></script>

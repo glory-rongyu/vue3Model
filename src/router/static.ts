@@ -20,20 +20,20 @@ const routes: Array<VueRouter.RouteRecordRaw> = [
                 redirect: '/demo/default',
                 children: [
                     {
-                        path: '/',
+                        path: '/demo/default',
                         name: 'demo-default',
-                        component: () => import('/@/views/demo/default/index.vue'),
+                        component: () => import('/@/views/demo/lifeCycle/index.vue'),
                         meta: {
                             title: 'demo-default' // 首页
                             // title: pageTitle('home'), // 首页
                         }
                     },
                     {
-                        path: '/',
+                        path: '/demo/vCodeDiff',
                         name: 'demo-vCodeDiff',
                         component: () => import('/@/views/demo/vCodeDiff/index.vue'),
                         meta: {
-                            title: 'demo-default' // 首页
+                            title: 'demo-vCodeDiff' // 首页
                             // title: pageTitle('home'), // 首页
                         }
                     }

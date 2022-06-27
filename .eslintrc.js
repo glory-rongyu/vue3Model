@@ -38,6 +38,7 @@ module.exports = {
         'import/extensions': 'off',
         'import/no-unresolved': 'off',
         'import/no-absolute-path': 'off',
-        'vue/multi-word-component-names': 'off'
+        'vue/multi-word-component-names': 'off',
+        'no-plusplus': 'off'
     }
 }
