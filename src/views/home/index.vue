@@ -3,6 +3,8 @@
         <h1>home</h1>
         <el-space>
             <el-button @click="goWhereByUrl('/demo/default')">生命周期</el-button>
+            <el-button @click="goWhereByUrlName('demo-refs-other')" type="primary">ref使用及其他</el-button>
+            <el-button @click="goWhereByUrlName('demo-watch')" type="primary">watch使用及计算属性</el-button>
             <el-button @click="goWhereByUrlName('demo-vCodeDiff')" type="primary">v-code-diff</el-button>
             <el-button type="success">成功按钮</el-button>
             <el-button type="info">信息按钮</el-button>

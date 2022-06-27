@@ -29,6 +29,24 @@ const routes: Array<VueRouter.RouteRecordRaw> = [
                         }
                     },
                     {
+                        path: '/demo/refs-other',
+                        name: 'demo-refs-other',
+                        component: () => import('/@/views/demo/refsOther/index.vue'),
+                        meta: {
+                            title: 'demo-refs-other' // 首页
+                            // title: pageTitle('home'), // 首页
+                        }
+                    },
+                    {
+                        path: '/demo/watch',
+                        name: 'demo-watch',
+                        component: () => import('/@/views/demo/watch/index.vue'),
+                        meta: {
+                            title: 'demo-watch' // 首页
+                            // title: pageTitle('home'), // 首页
+                        }
+                    },
+                    {
                         path: '/demo/vCodeDiff',
                         name: 'demo-vCodeDiff',
                         component: () => import('/@/views/demo/vCodeDiff/index.vue'),
