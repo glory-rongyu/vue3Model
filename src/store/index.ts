@@ -7,7 +7,8 @@ export const mainStore = defineStore('main', {
         return {
             msg: 'Hello world',
             count: 0,
-            userList: [] as userListType[]
+            userList: [] as userListType[],
+            token: ''
         }
     },
     getters: {
@@ -36,6 +37,30 @@ export const mainStore = defineStore('main', {
         async loadUserList() {
             const list: userListType[] = await getUserList()
             this.userList = list
+        },
+        setToken() {
+            this.token = 'TOKEN-9527'
+        },
+        resetToken() {
+            this.token = ''
         }
+    },
+    // 开启持久化
+    persist: {
+        enabled: true,
+        // storage:sessionStorage/localStorage,还可以自定义如下
+        // https://seb-l.github.io/pinia-plugin-persist/
+        // import Cookies from 'js-cookie'
+        // const cookiesStorage: Storage = {
+        //   setItem (key, state) {
+        //     return Cookies.set('accessToken', state.accessToken, { expires: 3 })
+        //   },
+        //   getItem (key) {
+        //     return JSON.stringify({
+        //       accessToken: Cookies.getJSON('accessToken'),
+        //     })
+        //   },
+        // }
+        strategies: [{ storage: localStorage, paths: ['token'] }]
     }
 })

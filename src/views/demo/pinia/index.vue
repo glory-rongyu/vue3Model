@@ -1,5 +1,5 @@
 <template>
-    <h1>pinia</h1>
+    <h1>pinia使用及持久化</h1>
     <div>{{ store.msg }}</div>
     <div>Count now is : {{ store.count }}</div>
     <div>pinia使用storeToRefs解构</div>
@@ -31,6 +31,13 @@
             <li v-for="(item, index) in userList" :key="index">{{ item.name }}---{{ item.age }}</li>
         </ul>
     </div>
+    <div>---------------------------</div>
+    <h2>持久化</h2>
+    <div>token is {{ token }}</div>
+    <el-space>
+        <el-button type="primary" @click="store.setToken">存储token</el-button>
+        <el-button @click="store.resetToken">清空token</el-button>
+    </el-space>
 </template>
 
 <script lang="ts" setup>
@@ -46,7 +53,7 @@ import { mainStore } from '../../../store'
  */
 
 const store: any = mainStore()
-const { count, userList } = storeToRefs(store)
+const { count, token, userList } = storeToRefs(store)
 
 onMounted(() => {
     store.loadUserList()

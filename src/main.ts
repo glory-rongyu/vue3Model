@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia, Pinia } from 'pinia'
+import piniaPersist from 'pinia-plugin-persist'
 import ElementPlus from 'element-plus'
 import router from './router/static'
 import 'element-plus/dist/index.css'
@@ -7,6 +8,9 @@ import 'element-plus/dist/index.css'
 import App from './App.vue'
 
 const pinia: Pinia = createPinia()
+// 持久化
+pinia.use(piniaPersist)
+
 const app = createApp(App)
 app.use(pinia)
 app.use(ElementPlus)
