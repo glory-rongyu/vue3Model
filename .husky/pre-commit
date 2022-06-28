@@ -2,4 +2,5 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 #npx eslint --ext .js,.jsx,.ts,.tsx,vue src
-npm run lint:lint-staged
+#npm run lint:lint-staged
+npx lint-staged
