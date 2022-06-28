@@ -4,7 +4,7 @@
         <div>----------------------</div>
         <div>watch</div>
         <div>{{ name }}</div>
-        <el-button @click="setName" type="primary">改变名称</el-button>
+        <el-button type="primary" @click="setName">改变名称</el-button>
         <div>
             <div>{{ area.province + '---' + area.city }}</div>
             <el-button @click="setArea">改变城市</el-button>
@@ -16,12 +16,12 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import { ref, watch, reactive, watchEffect, computed } from 'vue'
+<script lang="ts" setup>
+import { computed, reactive, ref, watch, watchEffect } from 'vue'
 
 /**
- * @Description:
- * @param watch（prop, (newValue, oldValue) => {}）监听新旧属性
+ * @Description:watch（prop, (newValue, oldValue) => {}）监听新旧属性
+ * @param -
  * @author glory
  * @date 2022/6/27
  */
@@ -67,8 +67,8 @@ watchEffect(() => {
 })
 
 /**
- * @Description:
- * @param computed
+ * @Description: computed
+ * @param -
  * @author glory
  * @date 2022/6/27
  */

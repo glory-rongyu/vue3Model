@@ -29,34 +29,34 @@
     </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 /**
-     * @Description:
-     * @param ref relative 对比使用以及 toRef,toRefs，watch，computed
-     *ref函数：
-     语法：const xxx = ref (initValue)
-     接受的数据类型：基本类型，引用类型
-     作用：把参数加工成一个响应式对象，全称为reference对象(我们下面一律简称为ref对象)
-     核心原理：如果使用的是基本类型响应式依赖Object.defineProperty( )，如果ref使用的是引用类型，底层ref会借助reactive的proxy 定义响应式
-     * reactive 只能 给对象添加响应式
-     语法：const xxx = ref (源对象)
-     接受的数据类型：引用类型
-     作用：把参数加工成一个代理对象，全称为proxy对象
-     核心原理：基于Es6的Proxy实现，通过Reflect反射代理操作源对象，相比于reactive定义的浅层次响应式数据对象，reactive定义的是更深层次的响应式数据对象
-     # 注：reactive申明的无法直接替换整个对象，如果有这个需求请使用ref
-     *
-     *
-     *第一种写法：除了对象都用ref来定义
-     *第二种写法：都用reactive来定义，然后用toRefs进行导出到页面使用
-     *
-     * @author glory
-     * @date 2022/6/27
-     */
-import { ref, reactive, toRef, toRefs } from 'vue'
+ * @Description:ref relative 对比使用以及 toRef,toRefs，watch，computed
+ * @param -
+ *ref函数：
+ 语法：const xxx = ref (initValue)
+ 接受的数据类型：基本类型，引用类型
+ 作用：把参数加工成一个响应式对象，全称为reference对象(我们下面一律简称为ref对象)
+ 核心原理：如果使用的是基本类型响应式依赖Object.defineProperty( )，如果ref使用的是引用类型，底层ref会借助reactive的proxy 定义响应式
+ * reactive 只能 给对象添加响应式
+ 语法：const xxx = ref (源对象)
+ 接受的数据类型：引用类型
+ 作用：把参数加工成一个代理对象，全称为proxy对象
+ 核心原理：基于Es6的Proxy实现，通过Reflect反射代理操作源对象，相比于reactive定义的浅层次响应式数据对象，reactive定义的是更深层次的响应式数据对象
+ # 注：reactive申明的无法直接替换整个对象，如果有这个需求请使用ref
+ *
+ *
+ *第一种写法：除了对象都用ref来定义
+ *第二种写法：都用reactive来定义，然后用toRefs进行导出到页面使用
+ *
+ * @author glory
+ * @date 2022/6/27
+ */
+import { reactive, ref, toRef, toRefs } from 'vue'
 
 /**
- * @Description:
- * @param ref用法及使用
+ * @Description:ref用法及使用
+ * @param -
  * @author glory
  * @date 2022/6/27
  */
@@ -74,14 +74,14 @@ setTimeout(() => {
 }, 4000)
 
 /**
- * @Description:
- * @param relative用法及使用
+ * @Description: relative用法及使用
+ * @param -
  * @author glory
  * @date 2022/6/27
  */
 
 // 响应式对象
-const reactiveObj = reactive({
+const reactiveObj: any = reactive({
     name: '太凉',
     age: 18,
     hobby: ['游泳', '爬山'],
@@ -112,8 +112,8 @@ setTimeout(() => {
 }, 3000)
 
 /**
- * @Description:
- * @param toRef 针对一个响应式对象（reactive 封装）的 prop（属性）创建一个ref，且保持响应式两者 保持引用关系
+ * @Description:toRef 针对一个响应式对象（reactive 封装）的 prop（属性）创建一个ref，且保持响应式两者 保持引用关系
+ * @param -
  * @author glory
  * @date 2022/6/27
  */
@@ -138,13 +138,13 @@ setTimeout(() => {
     nameRef.value = '我就是冰箱太凉'
 }, 6000)
 /**
- * @Description:
- * @param toRefs 是一种用于破坏响应式对象并将其所有属性转换为 ref 的实用方法
+ * @Description:toRefs 是一种用于破坏响应式对象并将其所有属性转换为 ref 的实用方法
+ * @param -
  * @author glory
  * @date 2022/6/27
  */
 // 响应式对象
-const reactiveObj3 = reactive({
+const reactiveObj3: any = reactive({
     name: '太凉',
     age: 18
 })

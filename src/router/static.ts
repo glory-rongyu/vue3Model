@@ -47,6 +47,15 @@ const routes: Array<VueRouter.RouteRecordRaw> = [
                         }
                     },
                     {
+                        path: '/demo/pinia',
+                        name: 'demo-pinia',
+                        component: () => import('/@/views/demo/pinia/index.vue'),
+                        meta: {
+                            title: 'demo-pinia' // 首页
+                            // title: pageTitle('home'), // 首页
+                        }
+                    },
+                    {
                         path: '/demo/vCodeDiff',
                         name: 'demo-vCodeDiff',
                         component: () => import('/@/views/demo/vCodeDiff/index.vue'),

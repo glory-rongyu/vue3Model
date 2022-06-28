@@ -1,12 +1,12 @@
 <template>
     <div>vue3生命周期</div>
     <div>num:{{ count }}</div>
-    <el-button @click="handleNumAdd" type="primary">num++</el-button>
+    <el-button type="primary" @click="handleNumAdd">num++</el-button>
 </template>
 
-<script setup lang="ts">
+<script lang="ts" setup>
 // defineProps
-import { ref, onMounted, onBeforeMount, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted } from 'vue'
+import { onBeforeMount, onBeforeUnmount, onBeforeUpdate, onMounted, onUnmounted, onUpdated, ref } from 'vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
@@ -19,8 +19,8 @@ const count = ref(0)
 const handleNumAdd = () => count.value++
 
 /**
- * @Description:
- * @param vue3生命周期钩子
+ * @Description:vue3生命周期钩子
+ * @param -
  * @author glory
  * @date 2022/6/27
  */
