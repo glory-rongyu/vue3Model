@@ -1,5 +1,5 @@
 <template>
-    <div>watch使用及computed</div>
+    <h1>watch使用及computed</h1>
     <div>
         <div>----------------------</div>
         <div>watch</div>

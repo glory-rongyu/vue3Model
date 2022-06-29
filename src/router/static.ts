@@ -56,6 +56,15 @@ const routes: Array<VueRouter.RouteRecordRaw> = [
                         }
                     },
                     {
+                        path: '/demo/mitt',
+                        name: 'demo-mitt',
+                        component: () => import('/@/views/demo/mitt/index.vue'),
+                        meta: {
+                            title: 'demo-mitt' // 首页
+                            // title: pageTitle('home'), // 首页
+                        }
+                    },
+                    {
                         path: '/demo/vCodeDiff',
                         name: 'demo-vCodeDiff',
                         component: () => import('/@/views/demo/vCodeDiff/index.vue'),

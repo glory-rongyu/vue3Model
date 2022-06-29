@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import { createPinia, Pinia } from 'pinia'
 import piniaPersist from 'pinia-plugin-persist'
+// import mitt from 'mitt'
 import ElementPlus from 'element-plus'
 import router from './router/static'
 import 'element-plus/dist/index.css'
@@ -16,6 +17,9 @@ app.use(pinia)
 app.use(ElementPlus)
 app.use(router)
 app.mount('#app')
+
+// 全局注册mitt
+// app.config.globalProperties.$mittBus = mitt()
 
 // 初始化
 // createApp(App).mount('#app')

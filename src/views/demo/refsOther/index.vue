@@ -1,5 +1,5 @@
 <template>
-    <div>refs-other</div>
+    <h1>refs-other</h1>
     <div>
         <div>----------------------</div>
         <div>ref</div>

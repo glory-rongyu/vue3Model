@@ -1,5 +1,5 @@
 <template>
-    <div>vue3生命周期</div>
+    <h1>vue3生命周期</h1>
     <div>num:{{ count }}</div>
     <el-button type="primary" @click="handleNumAdd">num++</el-button>
 </template>

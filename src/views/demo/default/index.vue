@@ -1,8 +1,8 @@
 <template>
-    <div>default</div>
+    <!--    <div>default</div>-->
     <router-view />
 </template>
 
-<script setup lang="ts"></script>
+<script lang="ts" setup></script>
 
 <style scoped></style>
