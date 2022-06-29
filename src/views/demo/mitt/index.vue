@@ -1,6 +1,6 @@
 <template>
-    <h1>mitt</h1>
-    <One />
+    <h1>mitt及父子传值</h1>
+    <One :number="num" @add="handleNumberAdd" />
     <Two />
 </template>
 
@@ -41,12 +41,16 @@
 
 // 调用全局注册的 mitt $mittBus
 // getCurrentInstance
-import { onBeforeMount, onMounted } from 'vue'
+import { onBeforeMount, onMounted, ref } from 'vue'
 import One from './components/one.vue'
 import Two from './components/two.vue'
 // import mittBus from '../../../mitt/index'
 
 // const { proxy: { $mittBus } } = getCurrentInstance()
+
+const num = ref(999)
+
+const handleNumberAdd = () => num.value++
 
 onBeforeMount(() => {
     // $mittBus.emit('mark', '哈哈哈')

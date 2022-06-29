@@ -7,6 +7,8 @@
             <el-button type="primary" @click="goWhereByUrlName('demo-watch')">watch使用及计算属性</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-pinia')">pinia使用</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-mitt')">mitt使用</el-button>
+            <el-button type="primary" @click="goWhereByUrlName('demo-axios')">axios封装使用</el-button>
+            <el-button type="primary" @click="goWhereByUrlName('demo-vueUse')">vueUse小试牛刀</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-vCodeDiff')">v-code-diff</el-button>
             <el-button type="success">成功按钮</el-button>
             <el-button type="info">信息按钮</el-button>

@@ -65,6 +65,24 @@ const routes: Array<VueRouter.RouteRecordRaw> = [
                         }
                     },
                     {
+                        path: '/demo/axios',
+                        name: 'demo-axios',
+                        component: () => import('/@/views/demo/requestDemo/index.vue'),
+                        meta: {
+                            title: 'demo-axios' // 首页
+                            // title: pageTitle('home'), // 首页
+                        }
+                    },
+                    {
+                        path: '/demo/vueUse',
+                        name: 'demo-vueUse',
+                        component: () => import('/@/views/demo/vueUse/index.vue'),
+                        meta: {
+                            title: 'demo-vueUse' // 首页
+                            // title: pageTitle('home'), // 首页
+                        }
+                    },
+                    {
                         path: '/demo/vCodeDiff',
                         name: 'demo-vCodeDiff',
                         component: () => import('/@/views/demo/vCodeDiff/index.vue'),
