@@ -16,3 +16,7 @@ vue3 模板
 npx husky add .husky/commit-msg "npx --no-install commitlint --edit "$1""  
 npx husky add .husky/pre-commit "npx eslint --ext .js,.jsx,.ts,.tsx,vue src"  
 npm run lint:lint-staged
+
+当前 dev 与 prod 的区别  
+dev 使用 mock
+prod 使用 anyMock

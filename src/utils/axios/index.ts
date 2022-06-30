@@ -1,4 +1,4 @@
-import { AxiosResponse } from 'axios'
+import { AxiosRequestConfig, AxiosResponse } from 'axios'
 import type { RequestConfig } from './request'
 import Request from './request'
 
@@ -15,12 +15,29 @@ interface MYRequestConfig<T, R> extends RequestConfig<Response<R>> {
 
 const request = new Request({
     baseURL: import.meta.env.BASE_URL,
+    // baseURL: import.meta.env.VITE_AXIOS_BASE_URL,
     timeout: 1000 * 60 * 5,
     interceptors: {
         // 请求拦截器
-        requestInterceptors: config => config,
+        requestInterceptors: (config: AxiosRequestConfig) => {
+            // 手动设置拦截器 自行更改
+            // console.log('config_', config)
+            // @ts-ignore
+            // eslint-disable-next-line no-param-reassign
+            config.headers.Authorization = 'Beer Glory'
+            return config
+        },
         // 响应拦截器
         responseInterceptors: (result: AxiosResponse) => {
+            // return result
+            // 对响应数据进行操作
+            // console.log('result__', result)
+            if (result?.data?.code === 200) {
+                return result?.data
+            }
+            // 对状态码异常的进行判断
+            //  ....
+
             return result
         }
     }

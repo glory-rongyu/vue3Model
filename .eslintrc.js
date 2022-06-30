@@ -39,6 +39,21 @@ module.exports = {
         'import/no-unresolved': 'off',
         'import/no-absolute-path': 'off',
         'vue/multi-word-component-names': 'off',
-        'no-plusplus': 'off'
+        'no-plusplus': 'off',
+        '@typescript-eslint/no-unused-vars': [
+            'error',
+            {
+                argsIgnorePattern: '^_',
+                varsIgnorePattern: '^_'
+            }
+        ],
+        'no-unused-vars': [
+            'error',
+            {
+                argsIgnorePattern: '^_',
+                varsIgnorePattern: '^_'
+            }
+        ],
+        'no-shadow': 'off'
     }
 }

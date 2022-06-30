@@ -2,7 +2,7 @@
     <div class="page">
         <h1>Vue使用及插件用例</h1>
         <el-space>
-            <el-button @click="goWhereByUrl('/demo/default')">生命周期</el-button>
+            <el-button type="primary" @click="goWhereByUrl('/demo/default')">生命周期</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-refs-other')">ref使用及其他</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-watch')">watch使用及计算属性</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-pinia')">pinia使用</el-button>
@@ -10,10 +10,6 @@
             <el-button type="primary" @click="goWhereByUrlName('demo-axios')">axios封装使用</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-vueUse')">vueUse小试牛刀</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-vCodeDiff')">v-code-diff</el-button>
-            <el-button type="success">成功按钮</el-button>
-            <el-button type="info">信息按钮</el-button>
-            <el-button type="warning">警告按钮</el-button>
-            <el-button type="danger">危险按钮</el-button>
         </el-space>
         <router-view />
     </div>
