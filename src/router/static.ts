@@ -83,6 +83,24 @@ const routes: Array<VueRouter.RouteRecordRaw> = [
                         }
                     },
                     {
+                        path: '/demo/v3Hooks',
+                        name: 'demo-v3Hooks',
+                        component: () => import('/@/views/demo/v3Hooks/index.vue'),
+                        meta: {
+                            title: 'demo-v3Hooks' // 首页
+                            // title: pageTitle('home'), // 首页
+                        }
+                    },
+                    {
+                        path: '/demo/customHooks',
+                        name: 'demo-customHooks',
+                        component: () => import('/@/views/demo/customHooks/index.vue'),
+                        meta: {
+                            title: 'demo-customHooks' // 首页
+                            // title: pageTitle('home'), // 首页
+                        }
+                    },
+                    {
                         path: '/demo/vCodeDiff',
                         name: 'demo-vCodeDiff',
                         component: () => import('/@/views/demo/vCodeDiff/index.vue'),

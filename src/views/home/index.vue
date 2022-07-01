@@ -9,6 +9,8 @@
             <el-button type="primary" @click="goWhereByUrlName('demo-mitt')">mitt使用</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-axios')">axios封装使用</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-vueUse')">vueUse小试牛刀</el-button>
+            <el-button type="primary" @click="goWhereByUrlName('demo-v3Hooks')">v3Hooks小试牛刀</el-button>
+            <el-button type="primary" @click="goWhereByUrlName('demo-customHooks')">自定义hooks</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-vCodeDiff')">v-code-diff</el-button>
         </el-space>
         <router-view />

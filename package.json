@@ -27,6 +27,7 @@
         "pinia": "^2.0.14",
         "pinia-plugin-persist": "^1.0.0",
         "v-code-diff": "^0.3.11",
+        "v3hooks": "^1.5.0",
         "vue": "^3.2.25",
         "vue-router": "^4.0.16"
     },
