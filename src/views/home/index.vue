@@ -13,6 +13,9 @@
             <el-button type="primary" @click="goWhereByUrlName('demo-customHooks')">自定义hooks</el-button>
             <el-button type="primary" @click="goWhereByUrlName('demo-vCodeDiff')">v-code-diff</el-button>
         </el-space>
+
+        <el-button style="margin-top: 20px" type="primary" @click="goWhereByUrl('/layout')">默认布局</el-button>
+
         <router-view />
     </div>
 </template>
@@ -37,6 +40,7 @@ onBeforeRouteLeave((to, from) => {
 })
 
 const goWhereByUrl = (url: string) => {
+    console.log('url__', url)
     // return router.push(url)
     return router.push({ path: url, query: { id: '9527' } })
 }
