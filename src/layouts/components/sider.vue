@@ -1,6 +1,6 @@
 <template>
     <el-scrollbar :height="screenHeight - 48">
-        <el-menu class="el-menu-vertical-demo" router @close="handleClose" @open="handleOpen">
+        <el-menu class="el-menu-vertical-demo" router unique-opened @close="handleClose" @open="handleOpen">
             <template v-for="item in menuList">
                 <el-sub-menu v-if="item.children && item.children.length > 0" :key="item.path" :index="item.path">
                     <template #title>
@@ -28,9 +28,20 @@
 </template>
 
 <script lang="ts" setup>
+import { onMounted } from 'vue'
 import { useWindowSize } from '@vueuse/core'
+import { arrayToTree, treeToArray } from '../../utils/methods'
 
-const menuList: any[] = [
+type menuItem = {
+    title: string
+    id: number
+    pid: number
+    path: string
+    icon?: string
+    children?: menuItem[]
+}
+
+const menuList: menuItem[] = [
     {
         title: '首页',
         id: 999,
@@ -122,6 +133,11 @@ const menuList: any[] = [
 ]
 
 const { height: screenHeight } = useWindowSize()
+
+onMounted(() => {
+    console.log('treeToArray__', treeToArray(menuList))
+    console.log('arrayToTree__', arrayToTree(treeToArray(menuList)))
+})
 
 const handleOpen = (key: string, keyPath: string[]) => {
     console.log('handleOpen', key, keyPath)
