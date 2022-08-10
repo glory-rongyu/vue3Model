@@ -1,5 +1,5 @@
 // import type { TagProps, ButtonType, ElForm } from 'element-plus'
-// import Table from '/@/components/table/index.vue'
+// import Table from '@/components/table/index.vue'
 // declare global {
 //     /* baTable */
 //     interface BaTable {
