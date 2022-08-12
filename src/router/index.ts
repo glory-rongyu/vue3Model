@@ -122,6 +122,14 @@ const routes: Array<VueRouter.RouteRecordRaw> = [
         },
         children: [
             {
+                path: '/layout/list/table-list',
+                name: 'table-list',
+                component: () => import('@/views/layout/table/index.vue'),
+                meta: {
+                    title: '查询表格'
+                }
+            },
+            {
                 path: '/layout/:path(.*)*',
                 redirect: '/404'
             },

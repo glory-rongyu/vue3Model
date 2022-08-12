@@ -3,6 +3,7 @@ import { createPinia, Pinia } from 'pinia'
 import piniaPersist from 'pinia-plugin-persist'
 // import mitt from 'mitt'
 import ElementPlus from 'element-plus'
+import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import 'virtual:svg-icons-register'
 import * as ElIcons from '@element-plus/icons-vue'
 // import SvgIcon from '@/components/SvgIcon.vue'
@@ -26,7 +27,7 @@ for (const name in ElIcons) {
 // app.component('SvgIcon', SvgIcon)
 
 app.use(pinia)
-app.use(ElementPlus)
+app.use(ElementPlus, { locale: zhCn })
 app.use(router)
 app.mount('#app')
 

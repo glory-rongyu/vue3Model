@@ -12,22 +12,13 @@
                 </div>
                 <template #dropdown>
                     <el-dropdown-menu>
-                        <el-dropdown-item>
-                            <el-icon>
-                                <User />
-                            </el-icon>
+                        <el-dropdown-item icon="User">
                             <span>个人中心</span>
                         </el-dropdown-item>
-                        <el-dropdown-item>
-                            <el-icon>
-                                <Setting />
-                            </el-icon>
+                        <el-dropdown-item icon="Setting">
                             <span>个人设置</span>
                         </el-dropdown-item>
-                        <el-dropdown-item>
-                            <el-icon>
-                                <SwitchButton />
-                            </el-icon>
+                        <el-dropdown-item icon="SwitchButton">
                             <span>退出登录</span>
                         </el-dropdown-item>
                     </el-dropdown-menu>
@@ -43,7 +34,7 @@ import SvgIcon from '@/components/SvgIcon.vue'
 
 <style lang="less" scoped>
 .top-header {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-between;
