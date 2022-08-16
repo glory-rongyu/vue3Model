@@ -30,7 +30,7 @@
 <script lang="ts" setup>
 import { onMounted } from 'vue'
 import { useWindowSize } from '@vueuse/core'
-import { arrayToTree, treeToArray } from '../../utils/methods'
+// import { arrayToTree, treeToArray } from '../../utils/methods'
 
 type menuItem = {
     title: string
@@ -135,8 +135,8 @@ const menuList: menuItem[] = [
 const { height: screenHeight } = useWindowSize()
 
 onMounted(() => {
-    console.log('treeToArray__', treeToArray(menuList))
-    console.log('arrayToTree__', arrayToTree(treeToArray(menuList)))
+    // console.log('treeToArray__', treeToArray(menuList))
+    // console.log('arrayToTree__', arrayToTree(treeToArray(menuList)))
 })
 
 const handleOpen = (key: string, keyPath: string[]) => {

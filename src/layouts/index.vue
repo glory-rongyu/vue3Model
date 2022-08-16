@@ -27,7 +27,7 @@ import Container from './components/container.vue'
     }
 
     .default-container {
-        width: 100vw;
+        width: 100%;
         display: flex;
 
         .left-side {

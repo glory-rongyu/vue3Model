@@ -131,10 +131,6 @@ const routes: Array<VueRouter.RouteRecordRaw> = [
             },
             {
                 path: '/layout/:path(.*)*',
-                redirect: '/404'
-            },
-            {
-                path: '/404',
                 name: 'notFound',
                 component: () => import('@/views/404.vue'),
                 meta: {

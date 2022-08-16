@@ -32,9 +32,12 @@ module.exports = {
     },
     plugins: ['vue', '@typescript-eslint'],
     rules: {
+        'eslint-disable-next-line': 'off',
         'no-console': 'off',
         'vue/no-multiple-template-root': 'off',
+        'vue/no-setup-props-destructure': 'off',
         'import/prefer-default-export': 'off',
+        'vue/no-mutating-props': 'off',
         'import/extensions': 'off',
         'import/no-unresolved': 'off',
         'import/no-absolute-path': 'off',

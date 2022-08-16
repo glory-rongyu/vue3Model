@@ -1,5 +1,5 @@
-import { AxiosRequestConfig, AxiosResponse } from 'axios'
-import type { RequestConfig } from './request'
+import {AxiosRequestConfig, AxiosResponse} from 'axios'
+import type {RequestConfig} from './request'
 import Request from './request'
 
 export interface Response<T> {
@@ -23,7 +23,6 @@ const request = new Request({
             // 手动设置拦截器 自行更改
             // console.log('config_', config)
             // @ts-ignore
-            // eslint-disable-next-line no-param-reassign
             config.headers.Authorization = 'Beer Glory'
             return config
         },
@@ -51,9 +50,8 @@ const request = new Request({
  * @returns {Promise}
  */
 const MyRequest = <D = any, T = any>(config: MYRequestConfig<D, T>) => {
-    const { method = 'GET' } = config
+    const {method = 'GET'} = config
     if (method === 'get' || method === 'GET') {
-        // eslint-disable-next-line no-param-reassign
         config.params = config.data
     }
     return request.request<Response<T>>(config)
