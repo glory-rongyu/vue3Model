@@ -1,5 +1,5 @@
 <template>
-    <el-dialog v-model="visible" :title="isEdit ? '编辑' : '新建'" width="600px" @close="$emit('handleCancel')">
+    <el-dialog v-model="dialogFormVisible" :title="isEdit ? '编辑' : '新建'" width="600px" @close="$emit('handleCancel')">
         <el-form ref="ruleFormRef" :label-width="formLabelWidth" :model="ruleForm" :rules="rules" status-icon>
             <el-form-item label="name" prop="name">
                 <el-input v-model="ruleForm.name" autocomplete="off" />
@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, reactive, ref, watch } from 'vue'
+import { computed, onMounted, reactive, ref, watch } from 'vue'
 import { FormInstance, FormRules } from 'element-plus'
 import { useRequest } from 'v3hooks'
 import { User } from '../../../../types/user'
@@ -35,9 +35,14 @@ const { formValues, isEdit, visible } = defineProps<{
     formValues: User
     isEdit: boolean
     visible: boolean
-    handleCancel: () => void
+    // handleCancel: () => void
 }>()
 const emit = defineEmits(['handleCancel'])
+
+const dialogFormVisible = computed({
+    get: () => visible,
+    set: () => emit('handleCancel')
+})
 
 // const dialogFormVisible = ref<boolean>(visible)
 const ruleFormRef = ref<FormInstance>()
