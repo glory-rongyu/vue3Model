@@ -1,8 +1,8 @@
-import {createApp} from 'vue'
-import {createPinia, Pinia} from 'pinia'
+import { createApp } from 'vue'
+import { createPinia, Pinia } from 'pinia'
 import piniaPersist from 'pinia-plugin-persist'
 // import mitt from 'mitt'
-import ElementPlus, {ElMessage} from 'element-plus'
+import ElementPlus, { ElMessage } from 'element-plus'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 import 'virtual:svg-icons-register'
 import * as ElIcons from '@element-plus/icons-vue'
@@ -26,10 +26,10 @@ for (const name in ElIcons) {
 // app.component('SvgIcon', SvgIcon)
 
 app.use(pinia)
-app.use(ElementPlus, {locale: zhCn})
+app.use(ElementPlus, { locale: zhCn })
 app.use(router)
 app.mount('#app')
-app.config.globalProperties.$message = ElMessage;
+app.config.globalProperties.$message = ElMessage
 
 // 全局注册mitt
 // app.config.globalProperties.$mittBus = mitt()

@@ -1,5 +1,5 @@
-import {AxiosRequestConfig, AxiosResponse} from 'axios'
-import type {RequestConfig} from './request'
+import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import type { RequestConfig } from './request'
 import Request from './request'
 
 export interface Response<T> {
@@ -13,8 +13,11 @@ interface MYRequestConfig<T, R> extends RequestConfig<Response<R>> {
     data?: T
 }
 
+const requestBaseUrl = import.meta.env.MODE === 'production' ? import.meta.env.VITE_AXIOS_BASE_URL : import.meta.env.BASE_URL
+
 const request = new Request({
-    baseURL: import.meta.env.BASE_URL,
+    baseURL: requestBaseUrl,
+    // baseURL: import.meta.env.BASE_URL,
     // baseURL: import.meta.env.VITE_AXIOS_BASE_URL,
     timeout: 1000 * 60 * 5,
     interceptors: {
@@ -50,7 +53,7 @@ const request = new Request({
  * @returns {Promise}
  */
 const MyRequest = <D = any, T = any>(config: MYRequestConfig<D, T>) => {
-    const {method = 'GET'} = config
+    const { method = 'GET' } = config
     if (method === 'get' || method === 'GET') {
         config.params = config.data
     }

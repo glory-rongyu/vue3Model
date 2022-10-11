@@ -3,7 +3,7 @@ export default [
     {
         url: '/api/user/list', // 匹配到指定url
         method: 'get', // 请求类型
-        response: ({query}: any) => {
+        response: ({ query }: any) => {
             console.log('query__', query)
             // return {
             //     code: 202,
@@ -49,7 +49,7 @@ export default [
     {
         url: '/api/user/list2', // 匹配到指定url
         method: 'post', // 请求类型
-        response: ({body}: any) => {
+        response: ({ body }: any) => {
             console.log('body_', body)
             return {
                 code: 200,
@@ -90,7 +90,7 @@ export default [
     {
         url: '/api/user/add', // 匹配到指定url
         method: 'post', // 请求类型
-        response: ({body}: any) => {
+        response: ({ body }: any) => {
             console.log('body_', body)
             if (!!body) {
                 return {
@@ -110,7 +110,7 @@ export default [
     {
         url: '/api/user/update', // 匹配到指定url
         method: 'post', // 请求类型
-        response: ({body}: any) => {
+        response: ({ body }: any) => {
             console.log('body_', body)
             if (!!body) {
                 return {
@@ -130,7 +130,7 @@ export default [
     {
         url: '/api/user/delete', // 匹配到指定url
         method: 'post', // 请求类型
-        response: ({body}: any) => {
+        response: ({ body }: any) => {
             console.log('body_', body)
             if (!!body) {
                 return {
