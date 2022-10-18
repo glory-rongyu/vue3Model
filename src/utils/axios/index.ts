@@ -1,4 +1,4 @@
-import { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { AxiosRequestConfig, AxiosResponse,AxiosError } from 'axios'
 import type { RequestConfig } from './request'
 import Request from './request'
 
@@ -41,6 +41,23 @@ const request = new Request({
             //  ....
 
             return result
+        },
+        responseInterceptorsCatch: (error: AxiosError) => {
+            // @ts-ignore
+            const { status } = error.response
+            if (status === 500) {
+                console.log('服务器错误,请联系管理员!')
+            }
+            if (!error.message) {
+                if (status === 502) {
+                    console.log('服务器更新中，请稍后再试！')
+                    return Promise.reject(status)
+                }
+                if (error) {
+                    console.log(error.response && error.response.data ? error.response.data : '网络异常')
+                }
+                return Promise.reject(error)
+            }
         }
     }
 })
